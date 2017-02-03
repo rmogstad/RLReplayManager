@@ -98,7 +98,7 @@ namespace RLReplayManager
                     OrangePlayers.Add(player);
                 }
             }
-            Debug.WriteLine(GetStringOrEmpty(parsedHeader, "ReplayName"));
+            //Debug.WriteLine(GetStringOrEmpty(parsedHeader, "ReplayName"));
             return new ReplayHeader {
                 ReplayFile = filePath,
                 ReplayName = GetStringOrEmpty(parsedHeader, "ReplayName"),

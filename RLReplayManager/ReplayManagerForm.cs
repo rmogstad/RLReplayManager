@@ -12,6 +12,7 @@ using System.Diagnostics;
 using System.Net;
 using System.Net.Http;
 using System.Net.Http.Headers;
+using System.IO.Compression;
 
 namespace RLReplayManager
 {
@@ -205,6 +206,26 @@ namespace RLReplayManager
         {
             this.Show();
             this.WindowState = FormWindowState.Normal;
+        }
+
+        private void SaveButton_Click(object sender, EventArgs e)
+        {
+            var sfd = new SaveFileDialog();
+            sfd.Filter = "Zip files (*.zip) | *.zip";
+            if (sfd.ShowDialog() != DialogResult.OK)
+            {
+                return;
+            }
+
+            string tempDirectory = Path.Combine(Path.GetTempPath(), Path.GetRandomFileName());
+            Directory.CreateDirectory(tempDirectory);
+
+            foreach (DataGridViewRow row in ReplayGridView.SelectedRows)
+            {
+                var replay = (ReplayHeader)row.DataBoundItem;
+                File.Copy(replay.ReplayFile, Path.Combine(tempDirectory, Path.GetFileName(replay.ReplayFile)));
+            }
+            
         }
     }
 }
