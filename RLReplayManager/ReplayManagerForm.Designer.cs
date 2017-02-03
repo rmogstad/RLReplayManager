@@ -54,6 +54,8 @@
             this.UploadStatusLabel = new System.Windows.Forms.ToolStripStatusLabel();
             this.notifyIcon1 = new System.Windows.Forms.NotifyIcon(this.components);
             this.SaveButton = new System.Windows.Forms.ToolStripButton();
+            this.PlayerSearchTextBox = new System.Windows.Forms.ToolStripTextBox();
+            this.toolStripLabel1 = new System.Windows.Forms.ToolStripLabel();
             this.menuStrip1.SuspendLayout();
             this.toolStrip1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer1)).BeginInit();
@@ -119,7 +121,9 @@
             // 
             this.toolStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.UploadButton,
-            this.SaveButton});
+            this.SaveButton,
+            this.PlayerSearchTextBox,
+            this.toolStripLabel1});
             this.toolStrip1.Location = new System.Drawing.Point(0, 24);
             this.toolStrip1.Name = "toolStrip1";
             this.toolStrip1.Size = new System.Drawing.Size(956, 25);
@@ -336,6 +340,21 @@
             this.SaveButton.Text = "Save";
             this.SaveButton.Click += new System.EventHandler(this.SaveButton_Click);
             // 
+            // PlayerSearchTextBox
+            // 
+            this.PlayerSearchTextBox.Alignment = System.Windows.Forms.ToolStripItemAlignment.Right;
+            this.PlayerSearchTextBox.Name = "PlayerSearchTextBox";
+            this.PlayerSearchTextBox.Size = new System.Drawing.Size(200, 25);
+            this.PlayerSearchTextBox.Leave += new System.EventHandler(this.PlayerSearchTextBox_Leave);
+            this.PlayerSearchTextBox.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.PlayerSearchTextBox_KeyPress);
+            // 
+            // toolStripLabel1
+            // 
+            this.toolStripLabel1.Alignment = System.Windows.Forms.ToolStripItemAlignment.Right;
+            this.toolStripLabel1.Name = "toolStripLabel1";
+            this.toolStripLabel1.Size = new System.Drawing.Size(97, 22);
+            this.toolStripLabel1.Text = "Search For Player";
+            // 
             // ReplayManagerForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -406,6 +425,8 @@
         private System.Windows.Forms.TextBox ErrorTextBox;
         private System.Windows.Forms.NotifyIcon notifyIcon1;
         private System.Windows.Forms.ToolStripButton SaveButton;
+        private System.Windows.Forms.ToolStripTextBox PlayerSearchTextBox;
+        private System.Windows.Forms.ToolStripLabel toolStripLabel1;
     }
 }
 

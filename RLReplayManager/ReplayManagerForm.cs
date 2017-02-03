@@ -225,7 +225,40 @@ namespace RLReplayManager
                 var replay = (ReplayHeader)row.DataBoundItem;
                 File.Copy(replay.ReplayFile, Path.Combine(tempDirectory, Path.GetFileName(replay.ReplayFile)));
             }
-            
+
+            ZipFile.CreateFromDirectory(tempDirectory, sfd.FileName);
+        }
+
+        private void PlayerSearchTextBox_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if(e.KeyChar == (char)Keys.Return)
+            {
+                FilterResults();
+            }
+        }
+
+
+        private void FilterResults()
+        {
+            if (PlayerSearchTextBox.Text == string.Empty)
+            {
+                ReplayGridView.DataSource = replays;
+            }
+            else
+            {
+                string searchName = PlayerSearchTextBox.Text;
+                var filteredReplays = (from r in replays
+                                       where (r.BlueTeamPlayers != null && r.BlueTeamPlayers.FindAll(b => b.Name.ToLower().Contains(searchName.ToLower())).Count > 0)
+                                       || (r.OrangeTeamPlayers != null && r.OrangeTeamPlayers.FindAll(b => b.Name.ToLower().Contains(searchName.ToLower())).Count > 0)
+                                       select r).ToList<ReplayHeader>()
+                ;
+                ReplayGridView.DataSource = filteredReplays;
+            }
+        }
+
+        private void PlayerSearchTextBox_Leave(object sender, EventArgs e)
+        {
+            FilterResults();
         }
     }
 }
