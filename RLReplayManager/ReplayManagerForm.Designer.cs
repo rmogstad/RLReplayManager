@@ -38,20 +38,20 @@
             this.toolStrip1 = new System.Windows.Forms.ToolStrip();
             this.UploadButton = new System.Windows.Forms.ToolStripButton();
             this.splitContainer1 = new System.Windows.Forms.SplitContainer();
+            this.tabControl1 = new System.Windows.Forms.TabControl();
+            this.tabPage1 = new System.Windows.Forms.TabPage();
+            this.ReplayGridView = new System.Windows.Forms.DataGridView();
+            this.tabPage2 = new System.Windows.Forms.TabPage();
+            this.ErrorTextBox = new System.Windows.Forms.TextBox();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.splitContainer2 = new System.Windows.Forms.SplitContainer();
-            this.OrangeGridView = new System.Windows.Forms.DataGridView();
-            this.label1 = new System.Windows.Forms.Label();
             this.BlueGridView = new System.Windows.Forms.DataGridView();
             this.label2 = new System.Windows.Forms.Label();
+            this.OrangeGridView = new System.Windows.Forms.DataGridView();
+            this.label1 = new System.Windows.Forms.Label();
             this.statusStrip1 = new System.Windows.Forms.StatusStrip();
             this.UploadProgressBar = new System.Windows.Forms.ToolStripProgressBar();
             this.UploadStatusLabel = new System.Windows.Forms.ToolStripStatusLabel();
-            this.tabControl1 = new System.Windows.Forms.TabControl();
-            this.tabPage1 = new System.Windows.Forms.TabPage();
-            this.tabPage2 = new System.Windows.Forms.TabPage();
-            this.ReplayGridView = new System.Windows.Forms.DataGridView();
-            this.ErrorTextBox = new System.Windows.Forms.TextBox();
             this.notifyIcon1 = new System.Windows.Forms.NotifyIcon(this.components);
             this.menuStrip1.SuspendLayout();
             this.toolStrip1.SuspendLayout();
@@ -59,18 +59,18 @@
             this.splitContainer1.Panel1.SuspendLayout();
             this.splitContainer1.Panel2.SuspendLayout();
             this.splitContainer1.SuspendLayout();
+            this.tabControl1.SuspendLayout();
+            this.tabPage1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.ReplayGridView)).BeginInit();
+            this.tabPage2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer2)).BeginInit();
             this.splitContainer2.Panel1.SuspendLayout();
             this.splitContainer2.Panel2.SuspendLayout();
             this.splitContainer2.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.OrangeGridView)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.BlueGridView)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.OrangeGridView)).BeginInit();
             this.statusStrip1.SuspendLayout();
-            this.tabControl1.SuspendLayout();
-            this.tabPage1.SuspendLayout();
-            this.tabPage2.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.ReplayGridView)).BeginInit();
             this.SuspendLayout();
             // 
             // menuStrip1
@@ -152,6 +152,64 @@
             this.splitContainer1.SplitterDistance = 499;
             this.splitContainer1.TabIndex = 2;
             // 
+            // tabControl1
+            // 
+            this.tabControl1.Controls.Add(this.tabPage1);
+            this.tabControl1.Controls.Add(this.tabPage2);
+            this.tabControl1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.tabControl1.Location = new System.Drawing.Point(0, 0);
+            this.tabControl1.Name = "tabControl1";
+            this.tabControl1.SelectedIndex = 0;
+            this.tabControl1.Size = new System.Drawing.Size(956, 499);
+            this.tabControl1.TabIndex = 2;
+            // 
+            // tabPage1
+            // 
+            this.tabPage1.Controls.Add(this.ReplayGridView);
+            this.tabPage1.Location = new System.Drawing.Point(4, 22);
+            this.tabPage1.Name = "tabPage1";
+            this.tabPage1.Padding = new System.Windows.Forms.Padding(3);
+            this.tabPage1.Size = new System.Drawing.Size(948, 473);
+            this.tabPage1.TabIndex = 0;
+            this.tabPage1.Text = "Replays";
+            this.tabPage1.UseVisualStyleBackColor = true;
+            // 
+            // ReplayGridView
+            // 
+            this.ReplayGridView.AllowUserToAddRows = false;
+            this.ReplayGridView.AllowUserToDeleteRows = false;
+            this.ReplayGridView.AllowUserToResizeRows = false;
+            this.ReplayGridView.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.AllCells;
+            this.ReplayGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.ReplayGridView.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.ReplayGridView.Location = new System.Drawing.Point(3, 3);
+            this.ReplayGridView.Name = "ReplayGridView";
+            this.ReplayGridView.ReadOnly = true;
+            this.ReplayGridView.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+            this.ReplayGridView.Size = new System.Drawing.Size(942, 467);
+            this.ReplayGridView.TabIndex = 2;
+            this.ReplayGridView.SelectionChanged += new System.EventHandler(this.ReplayGridView_SelectionChanged);
+            // 
+            // tabPage2
+            // 
+            this.tabPage2.Controls.Add(this.ErrorTextBox);
+            this.tabPage2.Location = new System.Drawing.Point(4, 22);
+            this.tabPage2.Name = "tabPage2";
+            this.tabPage2.Padding = new System.Windows.Forms.Padding(3);
+            this.tabPage2.Size = new System.Drawing.Size(948, 473);
+            this.tabPage2.TabIndex = 1;
+            this.tabPage2.Text = "Errors and Crap";
+            this.tabPage2.UseVisualStyleBackColor = true;
+            // 
+            // ErrorTextBox
+            // 
+            this.ErrorTextBox.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.ErrorTextBox.Location = new System.Drawing.Point(3, 3);
+            this.ErrorTextBox.Multiline = true;
+            this.ErrorTextBox.Name = "ErrorTextBox";
+            this.ErrorTextBox.Size = new System.Drawing.Size(942, 467);
+            this.ErrorTextBox.TabIndex = 0;
+            // 
             // dataGridView1
             // 
             this.dataGridView1.AllowUserToAddRows = false;
@@ -183,33 +241,6 @@
             this.splitContainer2.SplitterDistance = 470;
             this.splitContainer2.TabIndex = 0;
             // 
-            // OrangeGridView
-            // 
-            this.OrangeGridView.AllowUserToAddRows = false;
-            this.OrangeGridView.AllowUserToDeleteRows = false;
-            this.OrangeGridView.AllowUserToResizeRows = false;
-            this.OrangeGridView.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.AllCells;
-            this.OrangeGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.OrangeGridView.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.OrangeGridView.Location = new System.Drawing.Point(0, 33);
-            this.OrangeGridView.Name = "OrangeGridView";
-            this.OrangeGridView.ReadOnly = true;
-            this.OrangeGridView.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.OrangeGridView.Size = new System.Drawing.Size(482, 156);
-            this.OrangeGridView.TabIndex = 3;
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Dock = System.Windows.Forms.DockStyle.Top;
-            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 21.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(0, 0);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(118, 33);
-            this.label1.TabIndex = 2;
-            this.label1.Text = "Orange";
-            this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
             // BlueGridView
             // 
             this.BlueGridView.AllowUserToAddRows = false;
@@ -237,6 +268,33 @@
             this.label2.Text = "Blue";
             this.label2.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
+            // OrangeGridView
+            // 
+            this.OrangeGridView.AllowUserToAddRows = false;
+            this.OrangeGridView.AllowUserToDeleteRows = false;
+            this.OrangeGridView.AllowUserToResizeRows = false;
+            this.OrangeGridView.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.AllCells;
+            this.OrangeGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.OrangeGridView.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.OrangeGridView.Location = new System.Drawing.Point(0, 33);
+            this.OrangeGridView.Name = "OrangeGridView";
+            this.OrangeGridView.ReadOnly = true;
+            this.OrangeGridView.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+            this.OrangeGridView.Size = new System.Drawing.Size(482, 156);
+            this.OrangeGridView.TabIndex = 3;
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Dock = System.Windows.Forms.DockStyle.Top;
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 21.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Location = new System.Drawing.Point(0, 0);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(118, 33);
+            this.label1.TabIndex = 2;
+            this.label1.Text = "Orange";
+            this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
             // statusStrip1
             // 
             this.statusStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
@@ -260,64 +318,6 @@
             this.UploadStatusLabel.Size = new System.Drawing.Size(0, 17);
             this.UploadStatusLabel.Visible = false;
             // 
-            // tabControl1
-            // 
-            this.tabControl1.Controls.Add(this.tabPage1);
-            this.tabControl1.Controls.Add(this.tabPage2);
-            this.tabControl1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.tabControl1.Location = new System.Drawing.Point(0, 0);
-            this.tabControl1.Name = "tabControl1";
-            this.tabControl1.SelectedIndex = 0;
-            this.tabControl1.Size = new System.Drawing.Size(956, 499);
-            this.tabControl1.TabIndex = 2;
-            // 
-            // tabPage1
-            // 
-            this.tabPage1.Controls.Add(this.ReplayGridView);
-            this.tabPage1.Location = new System.Drawing.Point(4, 22);
-            this.tabPage1.Name = "tabPage1";
-            this.tabPage1.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage1.Size = new System.Drawing.Size(948, 473);
-            this.tabPage1.TabIndex = 0;
-            this.tabPage1.Text = "Replays";
-            this.tabPage1.UseVisualStyleBackColor = true;
-            // 
-            // tabPage2
-            // 
-            this.tabPage2.Controls.Add(this.ErrorTextBox);
-            this.tabPage2.Location = new System.Drawing.Point(4, 22);
-            this.tabPage2.Name = "tabPage2";
-            this.tabPage2.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage2.Size = new System.Drawing.Size(948, 473);
-            this.tabPage2.TabIndex = 1;
-            this.tabPage2.Text = "Errors and Crap";
-            this.tabPage2.UseVisualStyleBackColor = true;
-            // 
-            // ReplayGridView
-            // 
-            this.ReplayGridView.AllowUserToAddRows = false;
-            this.ReplayGridView.AllowUserToDeleteRows = false;
-            this.ReplayGridView.AllowUserToResizeRows = false;
-            this.ReplayGridView.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.AllCells;
-            this.ReplayGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.ReplayGridView.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.ReplayGridView.Location = new System.Drawing.Point(3, 3);
-            this.ReplayGridView.Name = "ReplayGridView";
-            this.ReplayGridView.ReadOnly = true;
-            this.ReplayGridView.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.ReplayGridView.Size = new System.Drawing.Size(942, 467);
-            this.ReplayGridView.TabIndex = 2;
-            this.ReplayGridView.SelectionChanged += new System.EventHandler(this.ReplayGridView_SelectionChanged);
-            // 
-            // ErrorTextBox
-            // 
-            this.ErrorTextBox.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.ErrorTextBox.Location = new System.Drawing.Point(3, 3);
-            this.ErrorTextBox.Multiline = true;
-            this.ErrorTextBox.Name = "ErrorTextBox";
-            this.ErrorTextBox.Size = new System.Drawing.Size(942, 467);
-            this.ErrorTextBox.TabIndex = 0;
-            // 
             // notifyIcon1
             // 
             this.notifyIcon1.Icon = ((System.Drawing.Icon)(resources.GetObject("notifyIcon1.Icon")));
@@ -334,6 +334,7 @@
             this.Controls.Add(this.splitContainer1);
             this.Controls.Add(this.toolStrip1);
             this.Controls.Add(this.menuStrip1);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MainMenuStrip = this.menuStrip1;
             this.Name = "ReplayManagerForm";
             this.Text = "Replay Manager";
@@ -347,6 +348,11 @@
             this.splitContainer1.Panel2.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer1)).EndInit();
             this.splitContainer1.ResumeLayout(false);
+            this.tabControl1.ResumeLayout(false);
+            this.tabPage1.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.ReplayGridView)).EndInit();
+            this.tabPage2.ResumeLayout(false);
+            this.tabPage2.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.splitContainer2.Panel1.ResumeLayout(false);
             this.splitContainer2.Panel1.PerformLayout();
@@ -354,15 +360,10 @@
             this.splitContainer2.Panel2.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer2)).EndInit();
             this.splitContainer2.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.OrangeGridView)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.BlueGridView)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.OrangeGridView)).EndInit();
             this.statusStrip1.ResumeLayout(false);
             this.statusStrip1.PerformLayout();
-            this.tabControl1.ResumeLayout(false);
-            this.tabPage1.ResumeLayout(false);
-            this.tabPage2.ResumeLayout(false);
-            this.tabPage2.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.ReplayGridView)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 

@@ -183,9 +183,7 @@ namespace RLReplayManager
                 if(!(response.Result.IsSuccessStatusCode || (response.Result.StatusCode == HttpStatusCode.BadRequest && response.Result.Content.ReadAsStringAsync().Result.Contains("already been uploaded")) ))
                 {
                     throw new Exception("Unable to upload replay '" + replayFile + "': " + response.Result.Content.ReadAsStringAsync().Result);
-                } 
-                //response.Result.Content
-                //var responseContent = await response.Result.Content.ReadAsStringAsync();
+                }
             }
 
         }
